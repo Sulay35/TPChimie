@@ -11,8 +11,8 @@ listelnC=[]
 modelelinY=[]
 
 # calcul de la liste des logarithmes des concentrations
-for val in listeC:
-    listelnC.append(np.log(val))
+for val in listeC: # Pour chaque valeur de la listeC: val 
+    listelnC.append(np.log(val)) # Effectuer le calcul ln(val) et ajout à la liste 
 
 # tracé du graphique donnant ln(C) en fonction de t
 plt.plot(listet,listelnC,"*",color="red")
@@ -22,8 +22,9 @@ plt.plot(listet,listelnC,"*",color="red")
 
 # rho : coefficient ds corrélation linéaire
 print("ln(C)=",a,"t+",b,"coef. de corr. =",rho)
-for val in listet:
-    modelelinY.append(a*val+b)
+
+for t in listet: # Pour chaque valeur du temps t de la listet
+    modelelinY.append(a*t+b) # Effectuer le calcul a*t+b et ajout à la liste 
 
 # tracé de la droite de régression linéaire
 plt.plot(listet,modelelinY,color="blue")
