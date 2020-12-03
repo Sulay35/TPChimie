@@ -11,8 +11,8 @@ listelnC=[]
 modelelinY=[]
 
 # calcul de la liste des logarithmes des concentrations
-for val in listeC: # Pour chaque valeur de la listeC: val 
-    listelnC.append(np.log(val)) # Effectuer le calcul ln(val) et ajout à la liste 
+for c in listeC: # Pour chaque valeur de la concentration de listeC: c 
+    listelnC.append(np.log(c)) # Effectuer le calcul ln(c) et ajout à la liste 
 
 # tracé du graphique donnant ln(C) en fonction de t
 plt.plot(listet,listelnC,"*",color="red")
